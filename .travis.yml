@@ -15,6 +15,9 @@ script:
 jobs:
   include:
     - stage: deploy
+      branches:
+        only:
+          - master
       script: ./build
       os: xenial
       addons:
