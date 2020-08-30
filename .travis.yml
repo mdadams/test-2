@@ -14,7 +14,7 @@ compiler:
 
 arch:
   - amd64
-  - arm64
+#  - arm64
 
 addons:
   apt:
@@ -37,6 +37,12 @@ notifications:
     email:
         on_success: change
         on_failure: always
+
+jobs:
+  include:
+  - os: linux
+  - arch: arm64
+  - compiler: clang
 
 jobs:
   include:
