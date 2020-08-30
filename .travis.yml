@@ -10,6 +10,11 @@ sudo: required
 #dist: precise
 #sudo: required
 
+addons:
+  apt:
+    packages:
+    - doxygen
+
 os:
     - linux
     - osx
@@ -40,3 +45,35 @@ notifications:
         on_success: change
         on_failure: always
 
+
+
+language: c
+compiler:
+- clang
+- gcc
+
+script:
+    - ./build
+
+jobs:
+  include:
+    - stage: deploy
+      if: branch = master
+      script: ./build
+      os: linux
+      dist: xenial
+      addons:
+        apt:
+          packages:
+          - doxygen
+      compiler: gcc
+      deploy:
+        provider: pages
+        repo: mdadams/test-2-ghp
+        target_branch: gh-pages
+        local_dir: doc/html
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        keep_history: true
+        on:
+          branch: master
