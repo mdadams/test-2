@@ -12,6 +12,10 @@ compiler:
     - clang
     - gcc
 
+arch:
+  - amd64
+  - arm64
+
 addons:
   apt:
     packages:
