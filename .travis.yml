@@ -32,7 +32,7 @@ compiler:
 
 arch:
   - amd64
-#  - arm64
+  #- arm64
 
 ################################################################################
 # Specify extra packages needed.
@@ -41,11 +41,11 @@ arch:
 addons:
   apt:
     packages:
-    - doxygen
-    - freeglut3-dev
-    - freeglut3
-    - libjpeg-turbo8
-    - libjpeg-turbo8-dev
+      - doxygen
+      - freeglut3-dev
+      - freeglut3
+      - libjpeg-turbo8
+      - libjpeg-turbo8-dev
 
 ################################################################################
 # Specify build script.
@@ -61,20 +61,10 @@ script:
 jobs:
   include:
     - stage: deploy
-      #if: branch = master
       script:
-        #- build/travis/prebuild
         - build/travis/build -t /tmp/jasper
       os: linux
       dist: xenial
-#      addons:
-#        apt:
-#          packages:
-#          - doxygen
-#          - freeglut3-dev
-#          - freeglut3
-#          - libjpeg-turbo8
-#          - libjpeg-turbo8-dev
       compiler: gcc
       deploy:
         provider: pages
