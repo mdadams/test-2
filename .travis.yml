@@ -27,7 +27,7 @@ addons:
 #install:
 
 script:
-    - build/travis/build
+    - build/travis/build -t /tmp/jasper
 
 notifications:
     email:
@@ -40,7 +40,7 @@ jobs:
       if: branch = master
       script:
         #- build/travis/prebuild
-        - build/travis/build
+        - build/travis/build -t /tmp/jasper
       os: linux
       dist: xenial
       addons:
