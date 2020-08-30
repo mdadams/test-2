@@ -1,6 +1,7 @@
 os:
     - linux
     - osx
+    - windows
 
 # Trusty Tahr release date: April 17, 2014
 dist: trusty
