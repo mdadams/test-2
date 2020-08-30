@@ -40,9 +40,9 @@ notifications:
 
 jobs:
   include:
-    - os: linux
-      arch: arm
-      compiler: gcc
+#    - os: linux
+#      arch: arm
+#      compiler: gcc
     - stage: deploy
       #if: branch = master
       script:
