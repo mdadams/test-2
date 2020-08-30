@@ -75,5 +75,5 @@ jobs:
         github_token: $GITHUB_TOKEN
         keep_history: true
         on:
-          # FIXME: Change to master
-          branch: develop
+          # FIXME: Change from feature branch to master
+          branch: master
