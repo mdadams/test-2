@@ -44,7 +44,7 @@ jobs:
       arch: arm
       compiler: gcc
     - stage: deploy
-      if: branch = master
+      #if: branch = master
       script:
         #- build/travis/prebuild
         - build/travis/build -t /tmp/jasper
