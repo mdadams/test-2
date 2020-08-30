@@ -17,7 +17,7 @@ jobs:
     - stage: deploy
       branches:
         only:
-          - master
+          - experimental
       script: ./build
       os: xenial
       addons:
