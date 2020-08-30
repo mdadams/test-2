@@ -3,6 +3,9 @@ compiler:
 - clang
 - gcc
 
+script:
+    - build
+
 deploy:
   provider: pages
   repo: mdadams/test-2-ghp
