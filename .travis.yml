@@ -40,12 +40,6 @@ notifications:
 
 jobs:
   include:
-  - os: linux
-  - arch: arm64
-  - compiler: clang
-
-jobs:
-  include:
     - stage: deploy
       if: branch = master
       script:
@@ -53,14 +47,14 @@ jobs:
         - build/travis/build -t /tmp/jasper
       os: linux
       dist: xenial
-      addons:
-        apt:
-          packages:
-          - doxygen
-          - freeglut3-dev
-          - freeglut3
-          - libjpeg-turbo8
-          - libjpeg-turbo8-dev
+#      addons:
+#        apt:
+#          packages:
+#          - doxygen
+#          - freeglut3-dev
+#          - freeglut3
+#          - libjpeg-turbo8
+#          - libjpeg-turbo8-dev
       compiler: gcc
       deploy:
         provider: pages
