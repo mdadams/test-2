@@ -1,27 +1,22 @@
 language: c
 
 # Trusty Tahr release date: April 17, 2014
+os: linux
 dist: trusty
 sudo: required
-#sudo: false
-##group: beta
-
-# Precise Pangolin release date: April 26, 2012
-#dist: precise
-#sudo: required
 
 addons:
   apt:
     packages:
     - doxygen
+    - freeglut3-dev
+    - freeglut3
+    - libjpeg-turbo8
+    - libjpeg-turbo8-dev
 
 os:
     - linux
     - osx
-
-#osx_image:
-#    - xcode7.3
-#    #- xcode8
 
 compiler:
     - clang
@@ -58,6 +53,10 @@ jobs:
         apt:
           packages:
           - doxygen
+          - freeglut3-dev
+          - freeglut3
+          - libjpeg-turbo8
+          - libjpeg-turbo8-dev
       compiler: gcc
       deploy:
         provider: pages
