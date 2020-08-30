@@ -68,4 +68,5 @@ jobs:
         github_token: $GITHUB_TOKEN
         keep_history: true
         on:
-          branch: master
+          # should be master not develop
+          branch: develop
