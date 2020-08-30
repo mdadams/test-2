@@ -1,0 +1,15 @@
+language: c
+compiler:
+- clang
+- gcc
+
+deploy:
+  provider: pages
+  repo: mdadams/test-2-ghp
+  target_branch: gh-pages
+  local_dir: doc
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
