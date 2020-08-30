@@ -15,7 +15,7 @@ script:
 jobs:
   include:
     - stage: deploy
-      if: branch = experimental
+      if: branch = master
       script: ./build
       os: xenial
       addons:
