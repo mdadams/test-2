@@ -1,9 +1,17 @@
-language: c
+os:
+    - linux
+    - osx
 
 # Trusty Tahr release date: April 17, 2014
 os: linux
 dist: trusty
 sudo: required
+
+language: c
+
+compiler:
+    - clang
+    - gcc
 
 addons:
   apt:
@@ -13,14 +21,6 @@ addons:
     - freeglut3
     - libjpeg-turbo8
     - libjpeg-turbo8-dev
-
-os:
-    - linux
-    - osx
-
-compiler:
-    - clang
-    - gcc
 
 #before_install:
 #    - build/travis/prebuild
