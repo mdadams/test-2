@@ -49,7 +49,7 @@ jobs:
   include:
     - stage: deploy
       if: branch = master
-      script: ./build
+      script: build/travis/prebuild
       os: linux
       dist: xenial
       addons:
