@@ -4,7 +4,7 @@ compiler:
 - gcc
 
 script:
-    - build
+    - ./build
 
 deploy:
   provider: pages
