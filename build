@@ -1,6 +1,10 @@
 #! /usr/bin/env bash
 
-echo "Hello"
-pwd
+top_dir=$(pwd) || exit 1
+
+apt-get doxygen || exit 1
+
+(cd $top_dir/src && cmake -H. -Btmp_cmake) || exit 1
+(cd $top_dir/src && cmake --build tmp_cmake) || exit 1
 
 exit 0
