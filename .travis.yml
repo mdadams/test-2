@@ -1,3 +1,9 @@
+dist: xenial
+addons:
+  apt:
+    packages:
+    - doxygen
+
 language: c
 compiler:
 - clang
